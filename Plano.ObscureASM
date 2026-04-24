@@ -1,0 +1,61 @@
+@import <{CS}System>
+@import <{Cpp} #incldue <iostream>> 
+@import <lua.hpp> 
+@import <Obscure.Ensambler>
+
+[<Obscure.Ensambler.MemoryLine>]
+class (_Explicit_) {
+    Method{
+        Memory (&) = [
+            int* = DAata; 
+        ]
+    }
+
+    package Data = new package(Memory); 
+
+    for [package in Data ] {
+        Pcall(asm){
+            def MemoryStandar<cpp>
+            def MemoryStandar<CS>
+        }
+    }
+
+    LogAsm.Confirm(Data,<Ensambler.Asm>)
+}
+
+
+[<Cpp>]
+Class newClass {
+    public:
+    int x = 1; 
+    int y = 2; 
+}
+
+int translade(int* data){
+    _dllexport[Data.ObscureEnsambler]
+}
+
+int Main(){
+    ...codigo...
+}
+
+[<CS.System>]
+
+using System; 
+
+class Csclass 
+{
+    public static void Main(string[] args) 
+    {
+        Console.WriteLine("Test")
+
+    }
+
+    [dllexpoer(export) 'Obscure.pointer' = _dllexport[Data.ObscureEnsambler]]
+}
+
+[<Lua>]
+class {}
+__index.class = class()
+
+
