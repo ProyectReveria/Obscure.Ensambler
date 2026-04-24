@@ -1,0 +1,19 @@
+@import <Obscure.Ensambler>
+
+//Como borrar el Lexer en Ensambler (si, Ahora creo soy linux)
+[<Obscure.Ensambler.MemoryLine]
+
+Memory.Def Directory = C:/Directory 
+
+class (_Create_)[Instance]{
+    file {
+        new << File << name (Directory); 
+        return Directory.Path
+    }
+}
+
+class (_Delete_){
+    Method {
+        Memory (&.Lexer) = [&Directory] 
+    }
+}
