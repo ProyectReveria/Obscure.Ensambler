@@ -3,6 +3,8 @@
 @import <lua.hpp> 
 @import <Obscure.Ensambler>
 
+
+//Guardado de memoria y ejemplificacion de como guardar diferentes sistemas ASM por lenguaje
 [<Obscure.Ensambler.MemoryLine>]
 class (_Explicit_) {
     Method{
@@ -23,7 +25,7 @@ class (_Explicit_) {
     LogAsm.Confirm(Data,<Ensambler.Asm>)
 }
 
-
+//Exporte a C++
 [<Cpp>]
 Class newClass {
     public:
@@ -39,6 +41,7 @@ int Main(){
     ...codigo...
 }
 
+//exporte a C#
 [<CS.System>]
 
 using System; 
@@ -54,6 +57,7 @@ class Csclass
     [dllexpoer(export) 'Obscure.pointer' = _dllexport[Data.ObscureEnsambler]]
 }
 
+//Lua lo hace en automatico practicamente
 [<Lua>]
 class {}
 __index.class = class()
