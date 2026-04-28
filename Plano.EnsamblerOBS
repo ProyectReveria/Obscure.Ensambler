@@ -9,7 +9,7 @@
 class (_Explicit_) {
     Method{
         Memory (&) = [
-            int* = DAata; 
+            int* = Data; 
         ]
     }
 
