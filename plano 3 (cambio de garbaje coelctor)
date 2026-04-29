@@ -1,0 +1,20 @@
+
+@import <@Service.GC>{
+    import CS.h
+    import lua.h
+}
+@import <Asembly.bit> 
+@import <Obscure.Ensambler>
+
+
+//Guardado de memoria y ejemplificacion de como guardar diferentes sistemas ASM por lenguaje
+[<Obscure.Ensambler.MemoryLine>]
+class (_GC_.Explicit){
+def CS.GC
+def lua.GC
+}struct (_GC_.implicit){
+    if (cs.active){
+        use lua.GC has CS.GC; 
+        return process.complete; 
+    }
+}
