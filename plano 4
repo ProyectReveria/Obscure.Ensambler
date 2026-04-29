@@ -1,0 +1,51 @@
+
+@import <{Cpp} #include <iostream>> 
+@import <Asembly.bit> 
+@import <Obscure.Ensambler>
+
+[Obscure.import.Memory_Read{C++}]
+
+int main(){
+    int x = 2; 
+    int *Pint = nullptr; 
+    pint = &x; 
+    [Obscure.Ensambler.Method Call stack; if (stack == new Method) {import (main)}]
+}
+
+
+//Guardado de memoria y ejemplificacion de como guardar diferentes sistemas ASM por lenguaje
+//Guardar direcciones exactas en ensamblador (requiere llamar al ensamblkador)
+[<Obscure.Ensambler.MemoryLine>]
+class (_Explicit_) {
+    Ensambler.Method = new Method {
+        for [Method in iRange = ASM.MemoryProcess]{
+            define.package[Direction] = 0x39b9e13; 
+            Kernel.if(Direction[onKernel] do 
+                Regenerate.Direction; 
+            end)
+            template<type n = package[Direction]; 
+            if (Direction) {
+                int value.Data on ASM = 2; 
+            }else {
+                std::ascii = true; 
+            }
+        }
+    }
+
+
+    Method{
+        Memory (&) = [
+            int* = DAata; 
+        ]
+    }
+
+    package Data = new package(Memory); 
+
+    for [package in Data ] {
+        Pcall(asm){
+            def MemoryStandar<cpp>
+        }
+    }
+
+    LogAsm.Confirm(Data,<Ensambler.Asm>)
+}
